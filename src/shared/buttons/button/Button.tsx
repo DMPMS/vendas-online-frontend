@@ -7,7 +7,7 @@ interface ButtonCurrentProps extends ButtonProps {
 }
 
 const Button = ({ margin, ...props }: ButtonCurrentProps) => {
-  return <ButtonAntd style={{ margin }} {...props} />;
+  return <ButtonAntd style={{ margin: margin }} {...props} />;
 };
 
 export default Button;
