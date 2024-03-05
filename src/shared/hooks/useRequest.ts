@@ -18,6 +18,7 @@ export const useRequests = () => {
       });
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const postRequest = async (url: string, body: any) => {
     setLoading(true);
     const returnData = await axios({
