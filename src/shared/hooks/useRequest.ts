@@ -22,15 +22,16 @@ export const useRequests = () => {
       });
   };
 
-  const postRequest = async (url: string, body: unknown) => {
+  const postRequest = async <Type>(url: string, body: unknown): Promise<Type | undefined> => {
     setLoading(true);
-    const returnData = await connectionAPIPost(url, body)
+    const returnData = await connectionAPIPost<Type>(url, body)
       .then((result) => {
         setNotification('Entrando...', 'success');
         return result;
       })
       .catch((error: Error) => {
         setNotification(error.message, 'error');
+        return undefined;
       });
 
     setLoading(false);
