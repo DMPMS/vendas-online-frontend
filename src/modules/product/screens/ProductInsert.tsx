@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Button from '../../../shared/components/buttons/button/Button';
@@ -8,10 +7,7 @@ import Screen from '../../../shared/components/screen/Screen';
 import Select from '../../../shared/components/select/Select';
 import { DisplayFlexJustifyRight } from '../../../shared/components/styles/display.styled';
 import { LimitedContainer } from '../../../shared/components/styles/limited.styled';
-import { URL_CATEGORY } from '../../../shared/constants/urls';
-import { MethodsEnum } from '../../../shared/enums/methods.enum';
-import { useDataContext } from '../../../shared/hooks/useDataContext';
-import { useRequests } from '../../../shared/hooks/useRequest';
+import { useCategory } from '../../category/hooks/useCategory';
 import { useInsertProduct } from '../hooks/useInsertProduct';
 import { ProductRoutesEnum } from '../routes';
 import { ProductInsertContainer } from '../styles/productInsert.style';
@@ -26,16 +22,9 @@ const ProductInsert = () => {
     handleChangeSelect,
   } = useInsertProduct();
 
-  const { categories, setCategories } = useDataContext();
-  const { request } = useRequests();
+  const { categories } = useCategory();
 
   const navigate = useNavigate();
-
-  useEffect(() => {
-    if (categories.length === 0) {
-      request(URL_CATEGORY, MethodsEnum.GET, setCategories);
-    }
-  }, []);
 
   const handleOnClickCancel = () => {
     navigate(ProductRoutesEnum.PRODUCT);
