@@ -1,3 +1,6 @@
+// Importei aqui para contornar o problema
+import '@testing-library/jest-dom';
+
 import type { Router as RemixRouter } from '@remix-run/router';
 import { useEffect } from 'react';
 import { createBrowserRouter, RouteObject, RouterProvider } from 'react-router-dom';
