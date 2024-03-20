@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 
 import categoryReducer from './reducers/categoryReducer';
 import globalReducer from './reducers/globalReducer';
+import orderReducer from './reducers/orderReducer';
 import productReducer from './reducers/productReducer';
 
 export const store = configureStore({
@@ -9,6 +10,7 @@ export const store = configureStore({
     productReducer,
     categoryReducer,
     globalReducer,
+    orderReducer,
   },
 });
 
