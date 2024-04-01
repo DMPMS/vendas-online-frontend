@@ -1,5 +1,5 @@
 // Importei aqui para contornar o problema, para rodar a aplicação, tem que remover essa linha
-// import '@testing-library/jest-dom';
+import '@testing-library/jest-dom';
 
 import type { Router as RemixRouter } from '@remix-run/router';
 import { useEffect } from 'react';
