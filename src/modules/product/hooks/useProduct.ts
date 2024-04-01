@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { URL_PRODUCT, URL_PRODUCT_ID } from '../../../shared/constants/urls';
 import { MethodsEnum } from '../../../shared/enums/methods.enum';
-import { useRequests } from '../../../shared/hooks/useRequest';
+import { useRequests } from '../../../shared/hooks/useRequests';
 import { ProductType } from '../../../shared/types/ProductType';
 import { useProductReducer } from '../../../store/reducers/productReducer/useProductReducer';
 import { ProductRoutesEnum } from '../routes';

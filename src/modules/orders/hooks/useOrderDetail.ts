@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 import { URL_ORDER_ID } from '../../../shared/constants/urls';
 import { MethodsEnum } from '../../../shared/enums/methods.enum';
-import { useRequests } from '../../../shared/hooks/useRequest';
+import { useRequests } from '../../../shared/hooks/useRequests';
 import { useOrderReducer } from '../../../store/reducers/orderReducer/useOrderReducer';
 
 export const useOrderDetail = (orderId?: string) => {

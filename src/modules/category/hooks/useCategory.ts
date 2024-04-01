@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { URL_CATEGORY, URL_CATEGORY_ID } from '../../../shared/constants/urls';
 import { MethodsEnum } from '../../../shared/enums/methods.enum';
-import { useRequests } from '../../../shared/hooks/useRequest';
+import { useRequests } from '../../../shared/hooks/useRequests';
 import { useCategoryReducer } from '../../../store/reducers/categoryReducer/useCategoryReducer';
 import { CategoryRoutesEnum } from '../routes';
 

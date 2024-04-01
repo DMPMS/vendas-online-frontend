@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { URL_USER } from '../../../shared/constants/urls';
 import { InsertUser } from '../../../shared/dtos/InsertUser.dto';
 import { MethodsEnum } from '../../../shared/enums/methods.enum';
-import { useRequests } from '../../../shared/hooks/useRequest';
+import { useRequests } from '../../../shared/hooks/useRequests';
 import { UserRoutesEnum } from '../routes';
 
 export const useUserInsert = () => {

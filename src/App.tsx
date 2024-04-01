@@ -1,5 +1,5 @@
 // Importei aqui para contornar o problema, para rodar a aplicação, tem que remover essa linha
-import '@testing-library/jest-dom';
+// import '@testing-library/jest-dom';
 
 import type { Router as RemixRouter } from '@remix-run/router';
 import { useEffect } from 'react';
@@ -15,7 +15,7 @@ import { URL_USER } from './shared/constants/urls';
 import { MethodsEnum } from './shared/enums/methods.enum';
 import { getAuthorizationToken, verifyLoggedIn } from './shared/functions/connection/auth';
 import { useNotification } from './shared/hooks/useNotification';
-import { useRequests } from './shared/hooks/useRequest';
+import { useRequests } from './shared/hooks/useRequests';
 import { useGlobalReducer } from './store/reducers/globalReducer/useGlobalReducer';
 
 const routes: RouteObject[] = [...loginRoutes];
